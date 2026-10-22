@@ -1,11 +1,7 @@
-# 📿 Sort by Reverse & Rotate: the necklace view
+# LeetCode Solutions
 
-My accepted solution to the LeetCode problem in [Problem.md](Problem.md).
+My LeetCode solutions. Each problem has its own folder with the code and, when there is one, a write-up.
 
-The idea: treat the array as a **necklace** whose beads never move. *Rotate Left* slides the clasp `#` one bead forward, and *Reverse* flips the reading direction.
-
-![Necklace intro](images/intro.gif)
-
-- [Solution.md](Solution.md): full write-up with animations
-- [Solution.cpp](Solution.cpp): the C++ code
-- [images/make_gifs.py](images/make_gifs.py): regenerates all the animations (`python3 images/make_gifs.py images`)
+| # | Problem | Difficulty | Solution | Write-up |
+|---|---|---|---|---|
+| 3942 | [Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/) | Medium | [C++](3942-minimum-operations-to-sort-a-permutation/Solution.cpp) | [Stop Moving the Array, Move the Clasp! 📿 \| Visual Explanation \| O(n)](3942-minimum-operations-to-sort-a-permutation/Solution.md) |
