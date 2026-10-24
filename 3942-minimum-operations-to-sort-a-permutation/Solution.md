@@ -15,7 +15,7 @@ Now both operations become tiny:
 | 🔄 **Rotate Left** | first element jumps to the end | the clasp `#` slides **one bead forward** in the reading direction |
 | 🔁 **Reverse** | the array is read backwards | the arrow **flips**; the clasp stays where it is |
 
-![Necklace intro](https://raw.githubusercontent.com/ParsaMOBB/leetcode/main/3942-minimum-operations-to-sort-a-permutation/images/intro.gif)
+![Necklace intro](images/intro.gif)
 
 Watch the colored array at the bottom: it changes on every move, but the necklace never does.
 
@@ -27,7 +27,7 @@ The beads never move, so the only arrays we can ever reach come from **reading t
 `[0, 1, …, n-1]` is a necklace where every bead's neighbours differ by exactly 1 (with `n-1` touching `0`).
 So **our** necklace has to look exactly like that too, read either ↻ or ↺.
 
-![Valid vs invalid necklace](https://raw.githubusercontent.com/ParsaMOBB/leetcode/main/3942-minimum-operations-to-sort-a-permutation/images/valid_vs_invalid.png)
+![Valid vs invalid necklace](images/valid_vs_invalid.png)
 
 In code: rotate `nums` so that `0` comes first. Then the array must be either
 
@@ -44,7 +44,7 @@ We have to end with:
 
 The clasp can only walk forward, and each flip costs 1 operation, so there are only two routes worth trying. Here they race on `nums = [2,3,4,5,6,7,0,1]`:
 
-![Two routes race](https://raw.githubusercontent.com/ParsaMOBB/leetcode/main/3942-minimum-operations-to-sort-a-permutation/images/routes.gif)
+![Two routes race](images/routes.gif)
 
 Let $p$ be the index of `0` in the original `nums`.
 
@@ -59,11 +59,11 @@ These are exactly the two `return` lines in the code. ✨
 
 **Example 1:** `[0,2,1]` → Rotate, Reverse → **2**
 
-![Example 1](https://raw.githubusercontent.com/ParsaMOBB/leetcode/main/3942-minimum-operations-to-sort-a-permutation/images/example1.gif)
+![Example 1](images/example1.gif)
 
 **Example 2:** `[1,0,2]` → Reverse, Rotate → **2**
 
-![Example 2](https://raw.githubusercontent.com/ParsaMOBB/leetcode/main/3942-minimum-operations-to-sort-a-permutation/images/example2.gif)
+![Example 2](images/example2.gif)
 
 ### Edge cases ⚠️
 

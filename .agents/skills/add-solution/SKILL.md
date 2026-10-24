@@ -57,6 +57,7 @@ Style (the user cares a lot about this):
 - The tone is theoretical but still a **solution**: definitions, **Lemma / Theorem** with short *Proof* … $\blacksquare$, and a clear characterization before the algorithm. Write it in the user's voice, sober and precise.
 - **No emoji**, except the heading `### Edge case ⚠️` when there is an edge case. No hype or marketing phrasing ("hiding somewhere", "gave it away", "the magic"). State facts plainly.
 - Use LaTeX (`$…$`, `$$…$$`) for math and tables where they help (for example a greedy trace on an example).
+- **Math must render on both GitHub and LeetCode.** GitHub HTML-escapes the math before rendering it and treats `\{` as a Markdown escape. So inside `$…$`, never use `&`, `<`, `>`, `\{`, `\}`. Use `\mathbin{\mathrm{AND}}` (bitwise AND), `\lt` / `\gt`, and `\lbrace … \rbrace` instead. Plain code like `` `a & b` `` outside math is fine. To check, render the file with `gh api -X POST /markdown` (`mode: gfm`) and look for `&amp;` inside `<math-renderer>`.
 - Check the statement's examples against the final characterization in a short list.
 - **Complexity**: `- Time complexity: $$O(...)$$` with a one-line reason, the same for space, and one block per solution.
 - **Code**: the code exactly as submitted. With several solutions, use consecutive fenced blocks with labels, which LeetCode shows as tabs: ```` ```cpp [Solution 1 - O(n log n)] ````.
