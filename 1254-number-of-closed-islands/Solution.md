@@ -1,5 +1,5 @@
 # Intuition
-The algorithm is nothing special. The only idea is to add one layer of land around the whole map. Every island that is not closed then merges with this layer into a single component, so the answer is the number of land components minus one.
+The main idea is to add one layer of land around the whole map. Every island that is not closed then merges with this layer into a single component, so the answer is the number of land components minus one.
 
 # Approach
 Islands are the connected components of the land cells, so it is natural to view the grid as a graph: the vertices are the land cells, and two land cells are adjacent if they share a side.
@@ -34,9 +34,6 @@ On the given examples:
 - Example 1: $C_0$ plus two closed islands, $3 - 1 = 2$.
 - Example 2: $C_0$ plus the single centre cell, $2 - 1 = 1$.
 - Example 3: $C_0$ plus the square ring and the cell inside it, $3 - 1 = 2$.
-
-### Edge case ⚠️
-If no island touches the boundary, as in Example 3, the ring $R$ is still a component of its own. So the $-1$ is correct even when there is nothing to merge.
 
 # Complexity
 - Time complexity: $$O(N \cdot M)$$
